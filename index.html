@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Indeed — Job Search</title>
+  <title>Computribe — Job Search</title>
   <link rel="shortcut icon" href="images/Screenshot_2026-05-19_201929-removebg-preview.png" type="image/x-icon">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav class="container">
       <div class="nav-left">
-        <a href="index.html" aria-label="Indeed"><img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Computribe" class="logo"></a>
+        <a href="index.html" aria-label="Computribe">
+          <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Computribe" class="logo">
+        </a>
+        
+        <!-- Desktop Nav Links -->
         <div class="nav-links">
           <a href="#" class="active">Find Jobs</a>
           <a href="#">Companies</a>
@@ -19,12 +23,32 @@
         </div>
       </div>
 
+      <!-- Mobile Menu Toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop Actions -->
       <div class="nav-actions">
         <a href="login.html" class="btn-ghost">Sign in</a>
         <button class="btn-primary">Post a job</button>
       </div>
     </nav>
   </header>
+
+  <!-- Mobile Menu Panel -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="active">Find Jobs</a>
+    <a href="#">Companies</a>
+    <a href="#">Salaries</a>
+    
+    <div class="mobile-menu-actions">
+      <a href="login.html" class="btn-ghost" style="width:100%;text-align:center;">Sign in</a>
+      <button class="btn-primary" style="width:100%;">Post a job</button>
+    </div>
+  </div>
 
   <main class="container">
     <section class="search-bar" role="search" aria-label="Job search">
@@ -42,9 +66,9 @@
         </div>
       </div>
 
-        <div class="media">
-          <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Job search illustration" class="hero-illustration">
-        </div>
+      <div class="media">
+        <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Job search illustration" class="hero-illustration">
+      </div>
     </section>
   </main>
 
@@ -54,9 +78,7 @@
     </div>
   </footer>
 
-  <script>
-    // small script to set year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-  </body>
+  <!-- Link to External JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>
