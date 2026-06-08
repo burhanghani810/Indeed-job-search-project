@@ -1,34 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Indeed — Job Search</title>
+  <link rel="shortcut icon" href="images/Screenshot_2026-05-19_201929-removebg-preview.png" type="image/x-icon">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-1">
-            <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="indeed logo">
-            <ul>
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">Company reviews</a></li>
-            </ul>
+  <header>
+    <nav class="container">
+      <div class="nav-left">
+        <a href="index.html" aria-label="Indeed"><img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Computribe" class="logo"></a>
+        <div class="nav-links">
+          <a href="#" class="active">Find Jobs</a>
+          <a href="#">Companies</a>
+          <a href="#">Salaries</a>
         </div>
-        <div class="nav-2">
-            <button type="button" onclick="location.href='login.html'">Sign in</button>
-            <hr>
-            <a href="">Employers/Post job</a>
-        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn-ghost">Sign in</a>
+        <button class="btn-primary">Post a job</button>
+      </div>
     </nav>
-    <form action="search" class="SearchBar">
-        <img src="images/search icon.png" alt="search-image"><input type="text" placeholder="Job title, keywords, or company" class="LSBar"><hr class="MidLine"><img src="images/location icon.png" alt="location-image"><input type="text" placeholder='City, State, Zip code, or "Remote"' class="RSBar"><button type="submit">Find jobs</button>
-    </form>
-    <div class="CenterSection">
-        <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="">
-        <h1>Your next job starts here</h1>
-        <h4>Create an account or sign in to see your personalised job recommendations.</h4>
-    <button type="button" onclick="location.href='login.html'">Get started ➜</button>
+  </header>
+
+  <main class="container">
+    <section class="search-bar" role="search" aria-label="Job search">
+      <input type="search" placeholder="Job title, keywords or company" aria-label="Search jobs">
+      <input type="text" placeholder="Location (optional)" aria-label="Location">
+      <button type="submit" aria-label="Search">Search</button>
+    </section>
+
+    <section class="hero">
+      <div class="content">
+        <h1>Find your next role at a company you'll love</h1>
+        <p>Millions of job listings, tailored recommendations, and company insights to help you make the best career move.</p>
+        <div class="cta">
+          <a href="login.html"><button class="btn-primary">Get started — it's free</button></a>
+        </div>
+      </div>
+
+        <div class="media">
+          <img src="images/Screenshot_2026-05-19_201929-removebg-preview.png" alt="Job search illustration" class="hero-illustration">
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Computribe — made with care</p>
     </div>
-</body>
+  </footer>
+
+  <script>
+    // small script to set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  </body>
 </html>
