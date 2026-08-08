@@ -142,7 +142,7 @@ nav{
   color:var(--text);
   border-radius:var(--radius);
     transition:background 0.2s ease, color 0.2s ease;
-
+}
 .mobile-menu-actions{
   display:flex;
   flex-direction:column;
