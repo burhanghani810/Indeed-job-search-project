@@ -34,3 +34,21 @@ document.addEventListener('keydown', (e) => {
     mobileMenu.classList.remove('active');
   }
 });
+
+// Keep clicked navbar link active
+const navbarLinks = document.querySelectorAll('.nav-links a');
+const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
+
+navbarLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navbarLinks.forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+
+mobileNavLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileNavLinks.forEach(item => item.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
