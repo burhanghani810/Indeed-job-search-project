@@ -141,14 +141,7 @@ nav{
   font-weight:600;
   color:var(--text);
   border-radius:var(--radius);
-  transition:all 0.2s ease;
-}
-
-.mobile-menu a:hover,
-.mobile-menu a.active{
-  background:var(--brand);
-  color:#fff;
-}
+    transition:background 0.2s ease, color 0.2s ease;
 
 .mobile-menu-actions{
   display:flex;
